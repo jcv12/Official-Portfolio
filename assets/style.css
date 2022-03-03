@@ -4,3 +4,113 @@
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     box-sizing: border-box;
 }
+/* header */
+header{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 12px;
+}
+
+header h1{
+    color:#121212;
+    font-weight: 400;
+
+}
+
+header nav{
+    float: inline;
+    margin: 7px 0;
+}
+
+header nav ul li{
+    display: inline-flex;
+}
+
+header nav ul li a{
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 30px;
+    text-decoration: none;
+    color: #30475e;
+  }
+/* END FOR: header */
+/* animation for hover effect */
+  .sliding-middle-out{
+      display: inline-block;
+      position: relative;
+  }
+
+  .sliding-middle-out:after {
+	content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+	transition: width .7s ease, color, background-color .7s ease;
+}
+.sliding-middle-out:hover:after {
+	width: 100%;
+	background-color: #b0d7e7;
+}
+/* END FOR: animation for hover effect */
+/* intro for img and heading */
+.hero {
+    background-image: url("./images/greek1.jpg");
+    background-color: #EEEEEE;
+    height: 520px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 100px;
+  }
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    font-weight: 400px;
+    top: 8px;
+    left: 600px;
+    transform: translate(-50%, -50%);
+    color: #EEEEEE;
+  }
+/* END FOR: intro for img and heading */
+/* start for about */
+
+/* END FOR: about */
+.knowledge {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.knowledge h2{
+    text-align: center;
+    color: #121212;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+  }
+
+.column li {
+    list-style: none;
+    padding: 8px;
+}
+
+.column img {
+    width: 75px;
+    height: 75px;
+}
+
+  .row:after {
+    content: "";
+}
+
+.experience {
+  text-align: center;
+}
+/*END FOR: knowldege */
