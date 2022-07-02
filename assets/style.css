@@ -1,121 +1,122 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+  box-sizing: border-box;
 }
+
 /* header */
 header{
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    margin-bottom: 12px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 12px;
 }
 
 header h1{
-    color:#121212;
-    font-weight: 400;
-
+  color:#121212;
+  font-weight: 400;
 }
 
 header nav{
-    float: inline;
-    margin: 7px 0;
+  float: inline;
+  margin: 7px 0;
 }
 
 header nav ul li{
-    display: inline-flex;
+  display: inline-flex;
 }
 
 header nav ul li a{
-    margin: 0 30px;
-    font-weight: lighter;
-    font-size: 30px;
-    text-decoration: none;
-    color: #30475e;
-  }
-/* END FOR: header */
-/* animation for hover effect */
-  .sliding-middle-out{
-      display: inline-block;
-      position: relative;
-  }
-
-  .sliding-middle-out:after {
-	content: '';
-	display: block;
-	margin: auto;
-	height: 3px;
-	width: 0px;
-	background: transparent;
-	transition: width .7s ease, color, background-color .7s ease;
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 30px;
+  text-decoration: none;
+  color: #30475e;
 }
+/* END FOR: header */
+
+/* animation for typing text */
+.line {
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 3em;
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+.typing-animation {
+  animation: blinkCursor 600ms steps(40) infinite normal,
+    typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14em;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(0, 0, 0, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+/* end for animation for typing text */
+
+/* animation for hover effect */
+.sliding-middle-out{
+    display: inline-block;
+    position: relative;
+}
+
+.sliding-middle-out:after {
+content: '';
+display: block;
+margin: auto;
+height: 3px;
+width: 0px;
+background: transparent;
+transition: width .7s ease, color, background-color .7s ease;
+}
+
 .sliding-middle-out:hover:after {
-	width: 100%;
-	background-color: #b0d7e7;
+width: 100%;
+background-color: #b0d7e7;
 }
 /* END FOR: animation for hover effect */
+
 /* intro for img and heading */
 .hero {
-    background-image: url("./images/greek1.jpg");
-    background-color: #EEEEEE;
-    height: 520px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    margin-bottom: 100px;
-  }
+  background-image: url("./assets/images/greek1.jpeg");
+  background-color: #EEEEEE;
+  height: 520px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 100px;
+}
 
 .hero-text {
-    text-align: center;
-    position: absolute;
-    font-weight: 400px;
-    top: 8px;
-    left: 600px;
-    transform: translate(-50%, -50%);
-    color: #EEEEEE;
-  }
-/* END FOR: intro for img and heading */
-/* start for about */
-
-/* END FOR: about */
-.knowledge {
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.knowledge h2{
-    text-align: center;
-    color: #121212;
-    font-weight: lighter;
-    font-size: 30px;
-}
-
-.column {
-    float: left;
-    width: 33.33%;
-    text-align: center;
-  }
-
-.column li {
-    list-style: none;
-    padding: 8px;
-}
-
-.column img {
-    width: 75px;
-    height: 75px;
-}
-
-  .row:after {
-    content: "";
-}
-
-.experience {
   text-align: center;
+  position: absolute;
+  font-weight: 400px;
+  top: 8px;
+  left: 600px;
+  transform: translate(-50%, -50%);
+  color: #EEEEEE;
 }
-/*END FOR: knowldege */
+/* END FOR: intro for img and heading */
 
-/* about */
+/* ABOUT */
 
 .trainers {
   width: 100%;
@@ -127,20 +128,23 @@ header nav ul li a{
   
   .trainer {
     width: 900px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
     background: #e5eff3;
     color: #000000;
     overflow: auto;
   }
   
   .trainer img {
-    width: 35%;
     float: left;
+    margin: 30px;
     border-radius: 50%;
+    width: 254px;
+    height: 254px;
+    vertical-align: middle;
   }
   
   .trainer-bio {
-    padding: 35px;
+    padding: 85px;
     float: left;
     width: 65%;
   }
@@ -164,63 +168,11 @@ header nav ul li a{
   .text-left {
     text-align: left;
   }
-  
-  /* reveal animation */
-  h3 span {
-    display: block;
-    animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
-  }
-  
-  @keyframes reveal {
-    0% {
-      transform: translate(0,100%);
-    }
-    100% {
-      transform: translate(0,0);
-    }
-  }
-  /* end for animation */
-  
-  /* animation for typing text */
-  .line {
-    border-right: 2px solid rgba(0, 0, 0, 0.75);
-    color: rgba(0, 0, 0, 0.75);
-    font-size: 3em;
-    text-align: center;
-    margin: 0 auto;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 313px;
-  }
-  
-  .typing-animation {
-    animation: blinkCursor 650ms steps(40) infinite normal,
-      typing 4s steps(40) 1s normal both;
-  }
-  
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 14em;
-    }
-  }
-  
-  @keyframes blinkCursor {
-    from {
-      border-right-color: rgba(0, 0, 0, 0.75);
-    }
-    to {
-      border-right-color: transparent;
-    }
-  }
-  /* end for animation for typing text */
-  
-  /* END FOR: about */
-  
-  /* experience  */
-  
+
+  /* end for ABOUT */
+
+  /* Projects */
+
   .container {
     display: flex;
     align-items: center;
@@ -313,6 +265,10 @@ header nav ul li a{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
   }
+
+  .card-body{
+    size: 18rem;
+  }
   
   .card-body h5{
     font-size: 24px;
@@ -347,12 +303,29 @@ header nav ul li a{
         width: 100%;
     }
   }
-  
-  /* END FOR: experiemnce */
-  
+
+  /* END for Projects */
+
   /* contact */
-  footer {
+  .footer {
     background-color: #e5eff3;
+  }
+
+  footer nav{
+    float: inline;
+    margin: 70px 0;
+  }
+  
+  footer nav ul li{
+    display: inline-flex;
+  }
+  
+  footer nav ul li a{
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 30px;
+    text-decoration: none;
+    color: #30475e;
   }
   
   .contact {
@@ -366,13 +339,10 @@ header nav ul li a{
       margin-top: 0.3rem;
       margin-left: 0.1rem;
   }
-  footer p {
-    text-align: center;
-    margin-bottom: 2rem;
-    background-color: #e5eff3;
-  }
-  
-  footer img {
-    width: 15px;
-    height: 15px;
-  }
+
+  .footer-img {
+      width: 15px;
+      height: 15px;
+    }
+
+  /* END for Contact */
