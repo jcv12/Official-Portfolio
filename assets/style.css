@@ -95,7 +95,7 @@ background-color: #b0d7e7;
 
 /* intro for img and heading */
 .hero {
-  background-image: url("./assets/images/greek1.jpeg");
+  background-image: url("./images/greek1.jpg");
   background-color: #EEEEEE;
   height: 520px;
   background-position: center;
@@ -137,6 +137,7 @@ background-color: #b0d7e7;
   .trainer img {
     float: left;
     margin: 30px;
+    margin-top: 80px;
     border-radius: 50%;
     width: 254px;
     height: 254px;
@@ -266,6 +267,11 @@ background-color: #b0d7e7;
     border-bottom-right-radius: 15px;
   }
 
+  .card-image {
+    height: 465px;
+    width: 465px;
+ }
+
   .card-body{
     size: 18rem;
   }
@@ -292,7 +298,7 @@ background-color: #b0d7e7;
     color: #222;
   }
   
-  @media(min-width: 577px) and (max-width: 768px){
+  @media(min-width: 477px) and (max-width: 768px){
     .col{
         width: 50%;
     }
@@ -307,6 +313,10 @@ background-color: #b0d7e7;
   /* END for Projects */
 
   /* contact */
+
+  .con-me {
+    margin: 30px;
+  }
   .footer {
     background-color: #e5eff3;
   }
@@ -341,8 +351,10 @@ background-color: #b0d7e7;
   }
 
   .footer-img {
-      width: 15px;
-      height: 15px;
-    }
+    width: 35px;
+    height: 35px;
+  }
+
+
 
   /* END for Contact */
